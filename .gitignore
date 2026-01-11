@@ -1,0 +1,30 @@
+
+# Python System
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.vscode/
+
+# Environment
+venv/
+env/
+ENV/
+
+# --- LARGE FILES (Handled by Git LFS) ---
+# *.pth dosyalarini artik LFS yonetecek, o yuzden izin veriyoruz.
+# Final_Model_Weights.pth
+# model/model_checkpoint/
+# web/model_checkpoint/
+# web/best_model.pth
+
+# --- USER EXCLUSION (Kullanici Istegi) ---
+# Veritabani klasörü (binlerce resim)
+database/
+
+# --- INCLUDED FOLDERS (Bunlar artik YUKLENECEK) ---
+# Grafikler model/results ve results icinde oldugu icin onlari engellemiyoruz.
+# Log dosyalari da yuklensin, sunumda lazim olur.
+# id_debug_log.txt yuklensin.
+
