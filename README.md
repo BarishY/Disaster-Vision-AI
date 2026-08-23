@@ -1,11 +1,14 @@
 # 🌍 Disaster-Vision-AI: Afet Tespit ve Görsel Farkındalık Sistemi
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-red)
-![Flask](https://img.shields.io/badge/Flask-Web%20App-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![EfficientNet](https://img.shields.io/badge/EfficientNetV2--S-91.13%25%20Accuracy-00599C?style=for-the-badge)
+![Flask](https://img.shields.io/badge/Flask-Web%20App-000000?style=for-the-badge&logo=flask&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-Bu proje, yapay zeka destekli bir **Doğal Afet Tespit ve Risk Analiz Platformudur**. Gelişmiş derin öğrenme mimarileri (**EfficientNetV2**) kullanılarak afet görselleri saniyeler içinde analiz edilir ve interaktif bir Türkiye haritası üzerinde bölgesel risk durumları görselleştirilir.
+Bu proje, yapay zeka destekli bir **Doğal Afet Tespit ve Risk Analiz Platformudur**. Gelişmiş derin öğrenme mimarileri (**EfficientNetV2-S**) kullanılarak afet görselleri saniyeler içinde analiz edilir ve interaktif bir Türkiye haritası üzerinde bölgesel risk durumları görselleştirilir.
+
+---
 
 ### 🎥 Proje Hakkında
 Sistem, kullanıcı tarafından yüklenen fotoğrafları analiz ederek **Yangın, Sel, Deprem, Çığ** veya **Normal** durum olup olmadığını tespit eder. Aynı zamanda şehirlere özel risk haritaları oluşturarak görsel farkındalık sağlar.
@@ -14,88 +17,62 @@ Sistem, kullanıcı tarafından yüklenen fotoğrafları analiz ederek **Yangın
 
 ## 🚀 Özellikler
 
-*   **Yüksek Doğruluklu Yapay Zeka:** 5 farklı sınıfı %91.13 doğruluk oranıyla tespit eder.
-*   **Transfer Learning Teknolojisi:** ImageNet ağırlıklarıyla eğitilmiş **EfficientNetV2-S** mimarisi.
-*   **İnteraktif SVG Haritası:** Türkiye'nin tüm illerini (adalar dahil) kapsayan, veri odaklı dinamik risk haritası.
-*   **Hızlı Analiz:** Yüklenen fotoğrafları milisaniyeler içinde işleyen optimize edilmiş inference motoru.
-*   **Modern Arayüz:** Kullanıcı dostu, responsive ve şık web arayüzü.
+- 🤖 **Yüksek Doğruluklu Yapay Zeka:** 5 farklı sınıfı **%91.13 doğruluk (accuracy)** oranıyla tespit eder.
+- ⚡ **Transfer Learning Teknolojisi:** ImageNet ağırlıklarıyla eğitilmiş **EfficientNetV2-S** mimarisi.
+- 🗺️ **İnteraktif SVG Haritası:** Türkiye'nin tüm illerini kapsayan, veri odaklı dinamik risk haritası.
+- ⏱️ **Hızlı Analiz:** Yüklenen fotoğrafları milisaniyeler içinde işleyen optimize edilmiş inference motoru.
+- 🎨 **Modern Web Arayüzü:** Flask ve Bootstrap destekli kullanıcı dostu web platformu.
+
+---
 
 ## 🛠️ Kurulum ve Çalıştırma
 
-Projeyi bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin:
+1. **Projeyi İndirin:**
+   ```bash
+   git clone https://github.com/BarishY/Disaster-Vision-AI.git
+   cd Disaster-Vision-AI
+   ```
 
-1.  **Projeyi İndirin:**
-    ```bash
-    git clone https://github.com/KULLANICI_ADI/Disaster-Vision-AI.git
-    cd Disaster-Vision-AI
-    ```
+2. **Gerekli Kütüphaneleri Yükleyin:**
+   ```bash
+   pip install flask torch torchvision pillow numpy scikit-learn matplotlib seaborn
+   ```
 
-2.  **Gerekli Kütüphaneleri Yükleyin:**
-    ```bash
-    pip install flask torch torchvision pillow numpy scikit-learn matplotlib seaborn
-    ```
+3. **Uygulamayı Başlatın:**
+   ```bash
+   cd web
+   python app.py
+   ```
 
-3.  **Uygulamayı Başlatın:**
-    ```bash
-    cd web
-    python app.py
-    ```
+4. **Tarayıcıda Açın:**
+   Tarayıcınızda `http://localhost:5000` adresine gidin.
 
-4.  **Tarayıcıda Açın:**
-    `http://localhost:5000` adresine gidin.
+---
 
 ## 📊 Model Performansı
 
-Modelimiz zorlu koşullarda test edilmiştir. Detaylı eğitim grafikleri `model/results` klasöründedir.
+Modelimiz zorlu doğa koşullarında test edilmiştir.
 
 | Metrik | Değer |
 |:---:|:---:|
-| **Model** | EfficientNetV2-S |
-| **Accuracy** | %91.13 |
+| **Model Mimarisi** | EfficientNetV2-S |
+| **Accuracy (Doğruluk)** | **%91.13** |
 | **Loss** | 0.24 |
 | **Epoch** | 25 (Early Stopping) |
 
 ---
----
 
-# 🌍 Disaster-Vision-AI: Disaster Detection & Awareness System
+## 📁 Proje Yapısı
 
-**Disaster-Vision-AI** is a deep learning-based platform designed to detect natural disasters from images and visualize regional risks on an interactive map.
-
-## 🚀 Features
-
-*   **Advanced AI Model:** Detects 5 classes (**Fire, Flood, Earthquake, Avalanche, Normal**) with **91.13% accuracy**.
-*   **Architecture:** Powered by **EfficientNetV2-S** using Transfer Learning.
-*   **Interactive Map:** Dynamic SVG map of Turkey reflecting real-time disaster risks per city.
-*   **Real-time Analysis:** Optimized pipeline for instant image classification.
-
-## 🛠️ Installation
-
-1.  **Clone the Repository:**
-    ```bash
-    git clone https://github.com/USERNAME/Disaster-Vision-AI.git
-    cd Disaster-Vision-AI
-    ```
-
-2.  **Install Dependencies:**
-    ```bash
-    pip install flask torch torchvision pillow numpy scikit-learn matplotlib seaborn
-    ```
-
-3.  **Run the App:**
-    ```bash
-    cd web
-    python app.py
-    ```
-
-4.  **Access:**
-    Open `http://localhost:5000` in your browser.
-
-## 📂 Project Structure
-
-*   `web/`: Flask application and interface codes.
-*   `model/`: Training scripts and performance graphs.
-*   `database/`: Dataset structure (Train/Test).
+```
+Disaster-Vision-AI/
+├── web/                     # Flask web uygulaması ve arayüz kodları
+├── model/                   # Derin öğrenme modeli eğitim betikleri ve grafikleri
+└── database/                # Veri seti yapısı (Train/Test)
+```
 
 ---
-*Developed using Python & PyTorch.*
+
+## 📜 Lisans
+
+Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır. Copyright (c) 2026 Barış Y. (BarishY)
